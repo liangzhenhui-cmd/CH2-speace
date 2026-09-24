@@ -1,0 +1,44 @@
+# Local Python and IDE files
+.venv/
+.python/
+.uv-cache/
+.idea/
+__pycache__/
+*.py[cod]
+
+# Downloaded caches and archives
+hf_cache_stage/
+服务器/
+*.tar.gz
+*.zip
+
+# Generated predictions and logs
+outputs/
+*.log
+production_train.log
+
+# Operational data needed for a runnable clone.
+data/*
+!data/feature_roles.json
+!data/README.md
+!data/24点数据.csv
+!data/weather_21cities_history.csv
+!data/chronos2_features.csv
+
+# Training and evaluation utilities are not needed by the daily predictor.
+autodl_setup.sh
+autodl_train.sh
+train_chronos2.py
+evaluate_chronos2.py
+compare_decision_rules.py
+verify_reproduction.py
+
+# Keep only the selected production LoRA adapter.
+models/chronos2_spread/*
+!models/chronos2_spread/lora-recent180-w3-lr12e6-r16-a16-b136-s450/
+models/chronos2_spread/lora-recent180-w3-lr12e6-r16-a16-b136-s450/*
+!models/chronos2_spread/lora-recent180-w3-lr12e6-r16-a16-b136-s450/lora-adapter/
+models/chronos2_spread/lora-recent180-w3-lr12e6-r16-a16-b136-s450/lora-adapter/*
+!models/chronos2_spread/lora-recent180-w3-lr12e6-r16-a16-b136-s450/lora-adapter/adapter_config.json
+!models/chronos2_spread/lora-recent180-w3-lr12e6-r16-a16-b136-s450/lora-adapter/adapter_model.safetensors
+!models/chronos2_spread/lora-recent180-w3-lr12e6-r16-a16-b136-s450/lora-adapter/README.md
